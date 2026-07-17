@@ -5,37 +5,47 @@
     box-sizing: border-box;
     font-family: 'Courier New', Courier, monospace;
 }
+
 body {
     background-color: #0d0d0d;
     color: #e0e0e0;
 }
+
 .accent-text {
     color: #ff007f;
 }
+
 header {
     background-color: #121212;
 }
+
 .navbar {
     display: flex;
     justify-content: space-between;
     padding: 1.2rem 5%;
 }
+
 .nav-links {
     display: flex;
     list-style: none;
 }
+
 .nav-links li a {
     color: #a0a0a0;
     text-decoration: none;
     padding: 0.5rem 1.2rem;
 }
-.nav-links li a.active, .nav-links li a:hover {
+
+.nav-links li a.active,
+.nav-links li a:hover {
     color: #ff007f;
 }
+
 .section {
     padding: 5rem 8%;
     text-align: center;
 }
+
 footer {
     text-align: center;
     padding: 2rem;
