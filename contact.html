@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Evidence Anya | Contact</title>
+        <title>Evidence Anya | Contact Gateway</title>
         <link rel="stylesheet" href="assets/css/style.css">
     </head>
 
@@ -26,10 +26,22 @@
             <h2>Secure <span class="accent-text">Gateway</span></h2>
             <form id="contactForm" class="contact-form">
                 <div class="form-group">
-                    <label for="name">Identifier:</label>
-                    <input type="text" id="name">
+                    <label for="name">Identifier (Full Name):</label>
+                    <input type="text" id="name" value="Evidence Onyinyechi Anya">
                 </div>
-                <button type="submit" class="btn">Transmit</button>
+                <div class="form-group">
+                    <label for="email">Secure Mail Address:</label>
+                    <input type="text" id="email" value="anyaevidence06@gmail.com">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Comms Channel (Digits Only):</label>
+                    <input type="text" id="phone" value="2349115148058">
+                </div>
+                <div class="form-group">
+                    <label for="message">Transmission Matrix Details:</label>
+                    <textarea id="message" rows="5" placeholder="Write your transmission parameters here..."></textarea>
+                </div>
+                <button type="submit" class="btn long-btn">Transmit Packet</button>
                 <p id="formFeedback" class="form-feedback"></p>
             </form>
         </main>
