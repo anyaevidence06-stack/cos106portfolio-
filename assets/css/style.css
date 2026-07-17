@@ -1,28 +1,48 @@
-/* Core Structural Setup & Variables */
+/* Core Structural Setup & Custom Theme Configurations */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Courier New', Courier, monospace;
+    /* Matrix look */
+    scroll-behavior: smooth;
 }
 
 body {
     background-color: #0d0d0d;
+    /* Pure sleek black background */
     color: #e0e0e0;
+    /* Off-white text clarity */
+    line-height: 1.6;
 }
 
 .accent-text {
     color: #ff007f;
+    /* Cyber hot pink accent color */
+    text-shadow: 0 0 10px rgba(255, 0, 127, 0.4);
 }
 
+/* Sticky Minimal Navigation Styling */
 header {
     background-color: #121212;
+    border-bottom: 2px solid #1a1a1a;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 1.2rem 5%;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 1.4rem;
+    font-weight: bold;
+    letter-spacing: 2px;
 }
 
 .nav-links {
@@ -34,20 +54,350 @@ header {
     color: #a0a0a0;
     text-decoration: none;
     padding: 0.5rem 1.2rem;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
 }
 
-.nav-links li a.active,
 .nav-links li a:hover {
     color: #ff007f;
 }
 
+/* Base Layout Configs */
 .section {
     padding: 5rem 8%;
     text-align: center;
 }
 
+.alt-bg {
+    background-color: #121212;
+    border-top: 1px solid #1a1a1a;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.highlights-bg {
+    background: linear-gradient(135deg, #181818 0%, #0d0d0d 100%);
+    border-bottom: 1px solid #ff007f33;
+}
+
+h2 {
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+/* Hero Section Layout */
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.profile-img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 2rem;
+    border: 2px solid #ff007f;
+    box-shadow: 0 0 15px rgba(255, 0, 127, 0.3);
+}
+
+.professional-title {
+    color: #ff007f;
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+    font-weight: bold;
+}
+
+.welcome-msg {
+    color: #888;
+    margin: 1rem 0;
+    font-style: italic;
+}
+
+.bio {
+    font-size: 1.05rem;
+    color: #b5b5b5;
+    text-align: justify;
+}
+
+/* About Grid Architecture (Flexbox Layout) */
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.about-box {
+    background: #181818;
+    padding: 2rem;
+    border-radius: 4px;
+    border: 1px solid #222;
+    flex: 1 1 300px;
+    text-align: left;
+    transition: border-color 0.3s ease;
+}
+
+.about-box:hover {
+    border-color: #ff007f;
+}
+
+.about-box h3 {
+    color: #ffffff;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    border-left: 3px solid #ff007f;
+    padding-left: 10px;
+}
+
+.inner-list {
+    list-style: none;
+    margin-top: 0.5rem;
+}
+
+.inner-list li::before {
+    content: "▫ ";
+    color: #ff007f;
+}
+
+.date-text {
+    font-size: 0.85rem;
+    color: #888;
+}
+
+.margin-top {
+    margin-top: 1rem;
+}
+
+/* Custom Growth Section Layout */
+.growth-container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.growth-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #d8d8d8;
+    font-style: italic;
+}
+
+/* Projects System Grid Architecture */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.project-card {
+    background: #181818;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid #222;
+    text-align: left;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: #ff007f;
+}
+
+.project-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    filter: grayscale(30%);
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-content h3 {
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.card-content p {
+    color: #a0a0a0;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Premium Pink Cyber UI Action Elements */
+.btn {
+    display: inline-block;
+    background-color: transparent;
+    color: #ff007f;
+    padding: 0.6rem 1.4rem;
+    text-decoration: none;
+    border: 1px solid #ff007f;
+    border-radius: 2px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ff007f;
+    color: #000;
+    box-shadow: 0 0 15px rgba(255, 0, 127, 0.4);
+}
+
+.long-btn {
+    width: 100%;
+}
+
+/* Tables and Media Structuring */
+table {
+    width: 100%;
+    max-width: 650px;
+    margin: 3rem auto 2rem auto;
+    border-collapse: collapse;
+    background: #121212;
+}
+
+th,
+td {
+    border: 1px solid #222;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #181818;
+    color: #ff007f;
+}
+
+video {
+    margin-top: 1.5rem;
+    border: 1px solid #222;
+}
+
+/* Academic Tasks System Interface Styles */
+.planner-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.planner-inputs {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 2rem;
+}
+
+.planner-inputs input {
+    flex: 1;
+    padding: 12px;
+    background-color: #0d0d0d;
+    border: 1px solid #222;
+    color: #fff;
+}
+
+.planner-inputs input:focus {
+    outline: none;
+    border-color: #ff007f;
+}
+
+.task-list {
+    list-style: none;
+}
+
+.task-item {
+    background: #181818;
+    padding: 14px;
+    margin-bottom: 10px;
+    border-left: 3px solid #ff007f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-item.completed span {
+    text-decoration: line-through;
+    color: #555;
+}
+
+.delete-btn {
+    background: transparent;
+    color: #e74c3c;
+    border: 1px solid #e74c3c;
+    padding: 4px 10px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+}
+
+.delete-btn:hover {
+    background: #e74c3c;
+    color: #fff;
+}
+
+/* Forms Engine Layout styling */
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: #a0a0a0;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: #121212;
+    border: 1px solid #222;
+    color: #fff;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #ff007f;
+}
+
+.form-feedback {
+    margin-top: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* University Copy Protection Footer */
 footer {
+    background-color: #080808;
+    color: #555;
     text-align: center;
     padding: 2rem;
-    color: #555;
+    font-size: 0.8rem;
+    border-top: 1px solid #1a1a1a;
+}
+
+/* Responsive Structural Layout rules for Smaller Screens */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links li {
+        margin: 4px 0;
+    }
 }
