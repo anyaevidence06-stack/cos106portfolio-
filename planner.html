@@ -1,39 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evidence Anya | Academic Planner</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">ANYA<span class="accent-text">.</span>DEV</div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="planner.html" class="active">Planner</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main class="section alt-bg">
-        <h2>Terminal <span class="accent-text">Planner</span></h2>
-        <div class="planner-container">
-            <div class="planner-inputs">
-                <input type="text" id="taskInput" placeholder="Initialize a new task...">
-                <button id="addTaskBtn" class="btn">Execute</button>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Evidence Anya | Academic Planner</title>
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+
+    <body>
+        <header>
+            <nav class="navbar">
+                <div class="logo">ANYA<span class="accent-text">.</span>DEV</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="planner.html" class="active">Planner</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="section alt-bg">
+            <h2>Terminal <span class="accent-text">Planner</span></h2>
+            <div class="planner-container">
+                <div class="planner-inputs">
+                    <input type="text" id="taskInput" placeholder="Initialize a new milestone task...">
+                    <button id="addTaskBtn" class="btn">Execute</button>
+                </div>
+                <ul id="taskList" class="task-list">
+                    <!-- JavaScript hooks map live content matrix elements here -->
+                </ul>
             </div>
-            <ul id="taskList" class="task-list"></ul>
-        </div>
-    </main>
+        </main>
 
-    <footer>
-        <p>&copy; Copyright 2025 MIVA Open University. All Rights Reserved.</p>
-    </footer>
-    <script src="assets/js/script.js"></script>
-</body>
+        <footer>
+            <p>&copy; Copyright 2025 MIVA Open University. All Rights Reserved.</p>
+        </footer>
+        <script src="assets/js/script.js"></script>
+    </body>
+
 </html>
