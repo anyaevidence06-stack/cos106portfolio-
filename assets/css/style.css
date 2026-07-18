@@ -623,3 +623,136 @@ footer {
     color: #b5b5b5;
     line-height: 1.6;
 }
+
+/* Premium Refined Split Channel Configurations */
+.contact-split-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+    align-items: stretch;
+    /* Forces equal height matching layouts */
+    margin-top: 1rem;
+    text-align: left;
+}
+
+/* Glassmorphism Profile Panel Left Column */
+.contact-info-panel {
+    background: rgba(20, 10, 20, 0.75) !important;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 0, 127, 0.25) !important;
+    padding: 3rem 2.5rem;
+    border-radius: 6px;
+    flex: 1 1 380px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-info-panel:hover {
+    border-color: #ff007f !important;
+    box-shadow: 0 0 25px rgba(255, 0, 127, 0.25);
+}
+
+.contact-info-panel h3 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.identity-profile-block {
+    margin: 2rem 0;
+    padding: 1.2rem;
+    background: rgba(255, 0, 127, 0.04);
+    border-left: 3px solid #ff007f;
+    border-radius: 2px;
+}
+
+.identity-profile-block h4 {
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin-bottom: 0.4rem;
+}
+
+.role-subtext {
+    font-size: 0.85rem;
+    color: #b5b5b5;
+    margin-bottom: 0.2rem;
+}
+
+.institution-text {
+    font-size: 0.85rem;
+    color: #ff007f;
+    font-weight: bold;
+}
+
+.email-link {
+    text-decoration: none;
+    transition: text-shadow 0.3s ease;
+}
+
+.email-link:hover {
+    text-shadow: 0 0 8px #ff007f;
+}
+
+.white-text {
+    color: #ffffff;
+}
+
+.interests-tags {
+    color: #cccccc;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.no-border {
+    border: none !important;
+}
+
+/* Glassmorphism Input Panel Right Column */
+.contact-form-panel {
+    flex: 1 1 420px;
+    display: flex;
+}
+
+.form-glass-card {
+    background: rgba(15, 8, 15, 0.6) !important;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 0, 127, 0.25) !important;
+    padding: 3rem 2.5rem;
+    border-radius: 6px;
+    width: 100%;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-glass-card:hover {
+    border-color: #ff007f !important;
+    box-shadow: 0 0 25px rgba(255, 0, 127, 0.25);
+}
+
+.form-glass-card h3 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.form-glass-card .contact-form {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    width: 100%;
+}
+
+/* Mobile Screen Tuning Configuration */
+@media (max-width: 768px) {
+    .contact-split-layout {
+        flex-direction: column;
+    }
+}
