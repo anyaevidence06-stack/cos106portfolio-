@@ -450,3 +450,64 @@ footer {
         margin: 4px 0;
     }
 }
+
+/* Layout Spacing & Card Adjustments */
+.container-narrow {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.margin-bottom-md {
+    margin-bottom: 3rem;
+}
+
+.margin-bottom-sm {
+    margin-bottom: 1.5rem;
+}
+
+.text-left {
+    text-align: left;
+}
+
+/* Category Grid Structure for Skills */
+.skills-matrix-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.skill-category-card {
+    background: rgba(255, 0, 127, 0.03);
+    padding: 1.2rem;
+    border: 1px solid rgba(255, 0, 127, 0.1);
+    border-radius: 4px;
+}
+
+.skill-category-card h5 {
+    color: #ff007f;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.skill-category-card p {
+    font-size: 0.9rem;
+    color: #cccccc;
+}
+
+/* Video Presentation Frame */
+.video-container {
+    max-width: 550px;
+    margin: 0 auto;
+    border: 1px solid rgba(255, 0, 127, 0.3);
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(255, 0, 127, 0.15);
+}
+
+.cyber-video {
+    display: block;
+    background: #000;
+}
