@@ -401,3 +401,83 @@ footer {
         margin: 4px 0;
     }
 }
+
+/* Dynamic Grid Background Layer */
+.cyber-bg {
+    background-color: #080808;
+    background-image:
+        linear-gradient(rgba(255, 0, 127, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 0, 127, 0.03) 1px, transparent 1px);
+    background-size: 30px 30px;
+    background-position: center top;
+}
+
+/* Subtle Layout Custom Adjustments */
+.tagline {
+    font-size: 0.95rem;
+    color: #888;
+    margin-top: -0.5rem;
+    margin-bottom: 1rem;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+.welcome-box {
+    margin: 2rem auto;
+    padding: 1rem;
+    border-top: 1px solid #ff007f22;
+    border-bottom: 1px solid #ff007f22;
+    max-width: 600px;
+}
+
+.welcome-msg {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.bio-wrapper {
+    background: #111111d9;
+    padding: 2.5rem;
+    border-radius: 6px;
+    border: 1px solid #1a1a1a;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    margin-top: 2rem;
+}
+
+.iconic-quote {
+    margin: 2rem 0;
+    padding: 1rem 1.5rem;
+    border-left: 3px solid #ff007f;
+    background: #1a1016;
+    color: #ff007f;
+    font-style: italic;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.animate-glow {
+    animation: pulseGlow 4s infinite ease-in-out;
+}
+
+@keyframes pulseGlow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 15px rgba(255, 0, 127, 0.2);
+    }
+
+    50% {
+        box-shadow: 0 0 30px rgba(255, 0, 127, 0.5);
+    }
+}
+
+.text-center {
+    text-align: center;
+}
+
+.margin-top-sm {
+    margin-top: 1.5rem;
+}
