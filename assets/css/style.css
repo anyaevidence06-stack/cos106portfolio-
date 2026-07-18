@@ -1,31 +1,36 @@
-/* Core Structural Setup & Custom Theme Configurations */
+/* Core Structural Setup & Variables */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Courier New', Courier, monospace;
-    /* Matrix look */
     scroll-behavior: smooth;
 }
 
+/* Global Animated Cyber Mesh Background Configuration - Applied to All Pages */
 body {
-    background-color: #0d0d0d;
-    /* Pure sleek black background */
+    background-color: #050206;
+    background-image:
+        radial-gradient(circle at 20% 30%, rgba(255, 0, 127, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(142, 68, 173, 0.15) 0%, transparent 40%),
+        linear-gradient(rgba(255, 0, 127, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 0, 127, 0.04) 1px, transparent 1px);
+    background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+    background-attachment: fixed;
     color: #e0e0e0;
-    /* Off-white text clarity */
     line-height: 1.6;
 }
 
 .accent-text {
     color: #ff007f;
-    /* Cyber hot pink accent color */
-    text-shadow: 0 0 10px rgba(255, 0, 127, 0.4);
+    text-shadow: 0 0 12px rgba(255, 0, 127, 0.6);
 }
 
 /* Sticky Minimal Navigation Styling */
 header {
-    background-color: #121212;
-    border-bottom: 2px solid #1a1a1a;
+    background-color: rgba(18, 18, 18, 0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid rgba(255, 0, 127, 0.2);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -55,11 +60,14 @@ header {
     text-decoration: none;
     padding: 0.5rem 1.2rem;
     font-size: 0.9rem;
-    transition: color 0.3s ease;
+    font-weight: bold;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
+.nav-links li a.active,
 .nav-links li a:hover {
     color: #ff007f;
+    text-shadow: 0 0 8px #ff007f;
 }
 
 /* Base Layout Configs */
@@ -68,15 +76,26 @@ header {
     text-align: center;
 }
 
-.alt-bg {
-    background-color: #121212;
-    border-top: 1px solid #1a1a1a;
-    border-bottom: 1px solid #1a1a1a;
+/* Futuristic Glowing Frosted Glass Panels */
+.bio-wrapper,
+.about-box,
+.project-card,
+.planner-container,
+.contact-form,
+table {
+    background: rgba(20, 10, 20, 0.65) !important;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 0, 127, 0.25) !important;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37), 0 0 15px rgba(255, 0, 127, 0.05);
+    border-radius: 6px;
+    transition: all 0.3s ease;
 }
 
-.highlights-bg {
-    background: linear-gradient(135deg, #181818 0%, #0d0d0d 100%);
-    border-bottom: 1px solid #ff007f33;
+.about-box:hover,
+.project-card:hover {
+    border-color: #ff007f !important;
+    box-shadow: 0 0 20px rgba(255, 0, 127, 0.25);
+    transform: translateY(-4px);
 }
 
 h2 {
@@ -93,35 +112,70 @@ h2 {
 }
 
 .profile-img {
-    width: 140px;
-    height: 140px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 2rem;
-    border: 2px solid #ff007f;
-    box-shadow: 0 0 15px rgba(255, 0, 127, 0.3);
+    border: 3px solid #ff007f;
+}
+
+.tagline {
+    font-size: 1rem;
+    color: #b5b5b5;
+    margin-top: -0.5rem;
+    margin-bottom: 1rem;
+    font-style: italic;
+    letter-spacing: 1px;
 }
 
 .professional-title {
-    color: #ff007f;
+    color: #9b59b6;
     font-size: 1.1rem;
     margin-top: 0.5rem;
     font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.welcome-box {
+    margin: 2rem auto;
+    padding: 1.2rem;
+    border-top: 1px solid rgba(255, 0, 127, 0.3);
+    border-bottom: 1px solid rgba(255, 0, 127, 0.3);
+    max-width: 600px;
 }
 
 .welcome-msg {
-    color: #888;
-    margin: 1rem 0;
-    font-style: italic;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.bio-wrapper {
+    padding: 2.5rem;
+    text-align: left;
+    margin-top: 2rem;
 }
 
 .bio {
     font-size: 1.05rem;
-    color: #b5b5b5;
+    color: #e0e0e0;
     text-align: justify;
 }
 
-/* About Grid Architecture (Flexbox Layout) */
+.iconic-quote {
+    margin: 2rem 0;
+    padding: 1rem 1.5rem;
+    border-left: 3px solid #ff007f;
+    background: rgba(255, 0, 127, 0.08);
+    color: #ffffff;
+    font-style: italic;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* About Grid Architecture */
 .about-container {
     display: flex;
     flex-wrap: wrap;
@@ -130,17 +184,9 @@ h2 {
 }
 
 .about-box {
-    background: #181818;
     padding: 2rem;
-    border-radius: 4px;
-    border: 1px solid #222;
     flex: 1 1 300px;
     text-align: left;
-    transition: border-color 0.3s ease;
-}
-
-.about-box:hover {
-    border-color: #ff007f;
 }
 
 .about-box h3 {
@@ -157,20 +203,10 @@ h2 {
 }
 
 .inner-list li::before {
-    content: "▫ ";
+    content: "⚡ ";
     color: #ff007f;
 }
 
-.date-text {
-    font-size: 0.85rem;
-    color: #888;
-}
-
-.margin-top {
-    margin-top: 1rem;
-}
-
-/* Custom Growth Section Layout */
 .growth-container {
     max-width: 700px;
     margin: 0 auto;
@@ -179,7 +215,7 @@ h2 {
 .growth-text {
     font-size: 1.2rem;
     line-height: 1.8;
-    color: #d8d8d8;
+    color: #ffffff;
     font-style: italic;
 }
 
@@ -192,24 +228,15 @@ h2 {
 }
 
 .project-card {
-    background: #181818;
-    border-radius: 4px;
     overflow: hidden;
-    border: 1px solid #222;
     text-align: left;
-    transition: transform 0.3s ease, border-color 0.3s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-    border-color: #ff007f;
 }
 
 .project-card img {
     width: 100%;
     height: 180px;
     object-fit: cover;
-    filter: grayscale(30%);
+    border-bottom: 1px solid rgba(255, 0, 127, 0.2);
 }
 
 .card-content {
@@ -222,12 +249,12 @@ h2 {
 }
 
 .card-content p {
-    color: #a0a0a0;
+    color: #b5b5b5;
     font-size: 0.9rem;
     margin-bottom: 1.5rem;
 }
 
-/* Premium Pink Cyber UI Action Elements */
+/* Cyber Functional Action Buttons */
 .btn {
     display: inline-block;
     background-color: transparent;
@@ -244,7 +271,7 @@ h2 {
 .btn:hover {
     background-color: #ff007f;
     color: #000;
-    box-shadow: 0 0 15px rgba(255, 0, 127, 0.4);
+    box-shadow: 0 0 15px rgba(255, 0, 127, 0.5);
 }
 
 .long-btn {
@@ -257,30 +284,31 @@ table {
     max-width: 650px;
     margin: 3rem auto 2rem auto;
     border-collapse: collapse;
-    background: #121212;
 }
 
 th,
 td {
-    border: 1px solid #222;
+    border: 1px solid rgba(255, 0, 127, 0.2);
     padding: 12px;
     text-align: left;
 }
 
 th {
-    background-color: #181818;
+    background-color: rgba(255, 0, 127, 0.1);
     color: #ff007f;
 }
 
 video {
     margin-top: 1.5rem;
-    border: 1px solid #222;
+    border: 1px solid rgba(255, 0, 127, 0.3);
+    border-radius: 4px;
 }
 
-/* Academic Tasks System Interface Styles */
+/* Academic Planner Styling */
 .planner-container {
     max-width: 600px;
     margin: 0 auto;
+    padding: 2rem;
 }
 
 .planner-inputs {
@@ -292,8 +320,8 @@ video {
 .planner-inputs input {
     flex: 1;
     padding: 12px;
-    background-color: #0d0d0d;
-    border: 1px solid #222;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 0, 127, 0.3);
     color: #fff;
 }
 
@@ -307,10 +335,11 @@ video {
 }
 
 .task-item {
-    background: #181818;
+    background: rgba(255, 0, 127, 0.05);
     padding: 14px;
     margin-bottom: 10px;
     border-left: 3px solid #ff007f;
+    border-radius: 4px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -318,7 +347,7 @@ video {
 
 .task-item.completed span {
     text-decoration: line-through;
-    color: #555;
+    color: #666;
 }
 
 .delete-btn {
@@ -336,10 +365,11 @@ video {
     color: #fff;
 }
 
-/* Forms Engine Layout styling */
+/* Form Styles */
 .contact-form {
     max-width: 500px;
     margin: 0 auto;
+    padding: 2.5rem;
     text-align: left;
 }
 
@@ -358,8 +388,8 @@ video {
 .form-group textarea {
     width: 100%;
     padding: 12px;
-    background-color: #121212;
-    border: 1px solid #222;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 0, 127, 0.3);
     color: #fff;
 }
 
@@ -375,17 +405,36 @@ video {
     text-align: center;
 }
 
-/* University Copy Protection Footer */
+/* Footer Control */
 footer {
-    background-color: #080808;
-    color: #555;
+    background-color: #030104;
+    color: #666;
     text-align: center;
     padding: 2rem;
     font-size: 0.8rem;
-    border-top: 1px solid #1a1a1a;
+    border-top: 1px solid rgba(255, 0, 127, 0.15);
+    margin-top: 5rem;
 }
 
-/* Responsive Structural Layout rules for Smaller Screens */
+/* Pulsing Radial Aura Animation for Photo */
+.animate-glow {
+    animation: pulseGlow 4s infinite ease-in-out;
+}
+
+@keyframes pulseGlow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 15px rgba(255, 0, 127, 0.3), inset 0 0 15px rgba(255, 0, 127, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 0 35px rgba(255, 0, 127, 0.7), inset 0 0 20px rgba(255, 0, 127, 0.5);
+        border-color: #ff00ab;
+    }
+}
+
+/* Responsive Structural Layout Rules */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
@@ -400,84 +449,4 @@ footer {
     .nav-links li {
         margin: 4px 0;
     }
-}
-
-/* Dynamic Grid Background Layer */
-.cyber-bg {
-    background-color: #080808;
-    background-image:
-        linear-gradient(rgba(255, 0, 127, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 0, 127, 0.03) 1px, transparent 1px);
-    background-size: 30px 30px;
-    background-position: center top;
-}
-
-/* Subtle Layout Custom Adjustments */
-.tagline {
-    font-size: 0.95rem;
-    color: #888;
-    margin-top: -0.5rem;
-    margin-bottom: 1rem;
-    font-style: italic;
-    letter-spacing: 1px;
-}
-
-.welcome-box {
-    margin: 2rem auto;
-    padding: 1rem;
-    border-top: 1px solid #ff007f22;
-    border-bottom: 1px solid #ff007f22;
-    max-width: 600px;
-}
-
-.welcome-msg {
-    font-size: 1.3rem;
-    font-weight: bold;
-    color: #ffffff;
-    letter-spacing: 1px;
-}
-
-.bio-wrapper {
-    background: #111111d9;
-    padding: 2.5rem;
-    border-radius: 6px;
-    border: 1px solid #1a1a1a;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    text-align: left;
-    margin-top: 2rem;
-}
-
-.iconic-quote {
-    margin: 2rem 0;
-    padding: 1rem 1.5rem;
-    border-left: 3px solid #ff007f;
-    background: #1a1016;
-    color: #ff007f;
-    font-style: italic;
-    font-size: 0.95rem;
-    line-height: 1.6;
-}
-
-.animate-glow {
-    animation: pulseGlow 4s infinite ease-in-out;
-}
-
-@keyframes pulseGlow {
-
-    0%,
-    100% {
-        box-shadow: 0 0 15px rgba(255, 0, 127, 0.2);
-    }
-
-    50% {
-        box-shadow: 0 0 30px rgba(255, 0, 127, 0.5);
-    }
-}
-
-.text-center {
-    text-align: center;
-}
-
-.margin-top-sm {
-    margin-top: 1.5rem;
 }
