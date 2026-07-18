@@ -1,111 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence Anya | Tech Showcase</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Premium Navigation Menu -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">ANYA<span class="accent-text">.</span>DEV</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="planner.html">Planner</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Evidence Anya | Projects</title>
-        <link rel="stylesheet" href="assets/css/style.css">
-    </head>
+    <main class="section container-narrow cyber-bg">
+        <!-- HERO SECTION -->
+        <div class="projects-hero">
+            <h2>Things I've Built <span class="accent-text">🚀</span></h2>
+            <blockquote class="hero-subtitle">
+                Every project started with curiosity. Every challenge taught me something new. Here's a collection of projects that reflect my journey as a learner, builder, and future AI engineer.
+            </blockquote>
+        </div>
 
-    <body>
-        <header>
-            <nav class="navbar">
-                <div class="logo">ANYA<span class="accent-text">.</span>DEV</div>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="projects.html" class="active">Projects</a></li>
-                    <li><a href="planner.html">Planner</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <main class="section">
-            <h2>My <span class="accent-text">Projects</span></h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <img src="https://unsplash.com" alt="Password Generator">
-                    <div class="card-content">
-                        <h3>1. Password Generator</h3>
-                        <p>A Python application that generates secure passwords based on user preferences, including
-                            password length and selected character types such as letters, numbers, and symbols.</p>
-                        <a href="https://github.com" target="_blank" class="btn">Source Code</a>
-                    </div>
+        <!-- FEATURED PROJECTS MATRIX GRID -->
+        <div class="projects-grid">
+            
+            <!-- PROJECT 1 — PERSONAL PORTFOLIO WEBSITE -->
+            <div class="project-card fade-in-panel">
+                <div class="card-multi-image-wrap">
+                    <img src="assets/images/portfolio-shot.jpg" alt="Personal Portfolio Website Workspace Main View" onerror="this.src='https://unsplash.com'">
+                    <img src="assets/images/portfolio-shot-2.jpg" alt="Personal Portfolio Website Inner Responsive View" onerror="this.src='https://unsplash.com'">
+                    <span class="status-badge progress-badge">In Progress</span>
                 </div>
-                <div class="project-card">
-                    <img src="https://unsplash.com" alt="Student Portfolio">
-                    <div class="card-content">
-                        <h3>2. Student Portfolio Website</h3>
-                        <p>A responsive multi-page website showcasing my education, technical skills, projects, and
-                            academic planner while demonstrating HTML, CSS, and JavaScript concepts.</p>
-                        <a href="https://github.com" target="_blank" class="btn">Source Code</a>
+                <div class="card-content">
+                    <span class="category-badge">HTML • CSS • JavaScript</span>
+                    <h3>Personal Portfolio Website</h3>
+                    <p>A responsive multi-page portfolio website developed as part of my Web Technologies coursework. The project showcases my educational journey, technical skills, academic planner, contact page, and personal projects while demonstrating semantic HTML, responsive CSS, and JavaScript interactivity.</p>
+                    <div class="tech-tags-container">
+                        <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Responsive Design</span>
                     </div>
-                </div>
-                <div class="project-card">
-                    <img src="https://unsplash.com" alt="Triangle Checker">
-                    <div class="card-content">
-                        <h3>3. Triangle Checker</h3>
-                        <p>A Python program that accepts two angles, determines whether they can form a valid triangle,
-                            and checks if the triangle is right-angled.</p>
-                        <a href="https://github.com" target="_blank" class="btn">Source Code</a>
+                    <div class="card-actions">
+                        <a href="https://github.com" target="_blank" class="btn btn-sm">GitHub Repository</a>
+                        <a href="index.html" class="btn btn-sm btn-outline">Live Website</a>
                     </div>
                 </div>
             </div>
 
-            <div class="extra-requirements">
-                <h3>Technical Skills Matrix</h3>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Skill Category / Concept</th>
-                            <th>Proficiency Level</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Python Programming</td>
-                            <td>Beginner Level</td>
-                        </tr>
-                        <tr>
-                            <td>HTML Structure</td>
-                            <td>Beginner Level</td>
-                        </tr>
-                        <tr>
-                            <td>CSS Layout Styling</td>
-                            <td>Beginner Level</td>
-                        </tr>
-                        <tr>
-                            <td>JavaScript Interactions</td>
-                            <td>Beginner Level</td>
-                        </tr>
-                        <tr>
-                            <td>Problem Solving Mechanics</td>
-                            <td>Intermediate Competence</td>
-                        </tr>
-                        <tr>
-                            <td>Technical Communication</td>
-                            <td>Intermediate Competence</td>
-                        </tr>
-                        <tr>
-                            <td>Teamwork & Syncing</td>
-                            <td>Intermediate Competence</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <h3>Introductory Technology Briefing</h3>
-                <video controls width="320">
-                    <source src="https://w3schools.com" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+            <!-- PROJECT 2 — PERSONAL PORTFOLIO LANDING PAGE -->
+            <div class="project-card fade-in-panel">
+                <div class="card-multi-image-wrap">
+                    <img src="assets/images/gamma-shot.jpg" alt="Gamma Landing Interface View 1" onerror="this.src='https://unsplash.com'">
+                    <img src="assets/images/gamma-shot-2.jpg" alt="Gamma Showcase Layout View 2" onerror="this.src='https://unsplash.com'">
+                    <span class="status-badge completed-badge">Completed</span>
+                </div>
+                <div class="card-content">
+                    <span class="category-badge">Web Design</span>
+                    <h3>Personal Portfolio Landing Page</h3>
+                    <p>A modern personal landing page designed using Gamma. The project focuses on presenting my personal brand with clean layouts, engaging visuals, and effective storytelling while strengthening my design and presentation skills.</p>
+                    <div class="tech-tags-container">
+                        <span>Gamma</span><span>UI Design</span><span>Visual Storytelling</span>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://gamma.app/docs/Virtual-Assistant-Portfolio-mjypgm69y0oqklm" target="_blank" class="btn btn-sm">View Landing Page</a>
+                        <a href="https://gamma.app/docs/Virtual-Assistant-Portfolio-mjypgm69y0oqklm" target="_blank" class="btn btn-sm btn-outline">Live Website</a>
+                    </div>
+                </div>
             </div>
-        </main>
 
-        <footer>
-            <p>&copy; Copyright 2025 MIVA Open University. All Rights Reserved.</p>
-        </footer>
-    </body>
+            <!-- PROJECT 3 — EXCEL DASHBOARD PROJECT -->
+            <div class="project-card fade-in-panel">
+                <div class="card-multi-image-wrap">
+                    <img src="assets/images/excel-shot.jpg" alt="Data Analytics Excel Spreadsheet Board" onerror="this.src='https://unsplash.com'">
+                    <img src="assets/images/excel-shot-2.jpg" alt="Excel Sub-sheet Metrics Matrix" onerror="this.src='https://unsplash.com'">
+                    <span class="status-badge completed-badge">Completed</span>
+                </div>
+                <div class="card-content">
+                    <span class="category-badge">Data Analysis</span>
+                    <h3>Excel Dashboard Project</h3>
+                    <p>An interactive Excel project that demonstrates data organization, analysis, and visualization using formulas, charts, and dashboard components. This project strengthened my analytical thinking and ability to communicate insights clearly through data.</p>
+                    <div class="tech-tags-container">
+                        <span>Microsoft Excel</span><span>Charts</span><span>Data Visualization</span><span>Formulas</span>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://docs.google.com/presentation/d/1ymLpr1O9EyrgNSTTfvq2Dh8NflvK1eWty6jbpajJ3sM/edit?usp=sharing" target="_blank" class="btn btn-sm">View Presentation</a>
+                        <a href="https://docs.google.com/presentation/d/1ymLpr1O9EyrgNSTTfvq2Dh8NflvK1eWty6jbpajJ3sM/edit?usp=sharing" target="_blank" class="btn btn-sm btn-outline">Project Overview</a>
+                    </div>
+                </div>
+            </div>
 
+        </div>
+
+        <!-- CURRENTLY BUILDING INFRASTRUCTURE SECTION -->
+        <div class="currently-building-section">
+            <h2 class="sub-section-heading">🚧 Currently Building</h2>
+            <p class="section-desc">Every great portfolio is a work in progress. Here are the projects I'm actively working on.</p>
+            
+            <div class="mini-grid">
+                <!-- MINI CARD 1 -->
+                <div class="mini-card">
+                    <div class="mini-header">
+                        <h4>Smart Password Generator</h4>
+                        <span class="mini-badge">Coming Soon</span>
+                    </div>
+                    <p>A Python application that generates secure passwords using customizable lengths and character types while applying randomness and input validation.</p>
+                </div>
+                <!-- MINI CARD 2 -->
+                <div class="mini-card">
+                    <div class="mini-header">
+                        <h4>Right-Angled Triangle Checker</h4>
+                        <span class="mini-badge">Coming Soon</span>
+                    </div>
+                    <p>A Python application that validates triangle angles and determines whether the triangle is right-angled while handling invalid user input.</p>
+                </div>
+                <!-- MINI CARD 3 -->
+                <div class="mini-card">
+                    <div class="mini-header">
+                        <h4>CodeAlpha Python Projects</h4>
+                        <span class="mini-badge">Coming Soon</span>
+                    </div>
+                    <p>A collection of Python projects completed during my CodeAlpha Internship, including automation scripts, beginner Python applications, and problem-solving challenges.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROJECT PHILOSOPHY CLOSING MARQUEE -->
+        <div class="philosophy-wrapper text-center">
+            <p class="philosophy-quote">"Every expert was once a beginner who refused to stop building."</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; Copyright 2025 MIVA Open University. All Rights Reserved. | Designed by Evidence Anya</p>
+    </footer>
+</body>
 </html>
